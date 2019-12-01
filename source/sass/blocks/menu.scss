@@ -1,0 +1,152 @@
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu__item {
+  margin-top: 13px;
+}
+
+.menu__link {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+
+  margin-right: 42px;
+  padding-top: 14px;
+  padding-bottom: 5px;
+  padding-left: 40px;
+  padding-right: 5px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.menu__link:hover,
+.menu__link:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.menu__link:active {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.menu__link--email {
+  width: 140px;
+  margin-right: 78px;
+}
+
+.menu__link--tel {
+  width: 220px;
+}
+
+.menu__link::before {
+  position: absolute;
+}
+
+.menu__link--email::before {
+  content: url("../img/icon-mail.svg");
+  top: 15px;
+  left: 0;
+
+  width: 19px;
+  height: 14px;
+}
+
+.menu__link--tel::before {
+  content: url("../img/icon-phone.svg");
+  top: 14px;
+  left: 6px;
+
+  width: 18px;
+  height: 18px;
+}
+
+.menu__link--email:hover::before,
+.menu__link--email:focus::before {
+  opacity: 0.6;
+}
+
+.menu__link--email:active::before {
+  opacity: 0.2;
+}
+
+.menu__link--tel:hover::before,
+.menu__link--tel:focus::before {
+  opacity: 0.6;
+}
+
+.menu__link--tel:active::before {
+  opacity: 0.2;
+}
+
+@media (max-width: $tablet-width) {
+  .menu__item {
+    margin-top: 24px;
+  }
+
+  .menu__link {
+    width: 26px;
+    padding-left: 5px;
+    margin-right: 0;
+    margin-left: 32px;
+  }
+
+  .menu__link-text {
+    display: none;
+  }
+
+  .menu__link--email::before {
+    top: 2px;
+    right: 0;
+
+    width: 25px;
+    height: 19px;
+  }
+
+  .menu__link--tel::before {
+    top: 0;
+    right: 0;
+
+    width: 24px;
+    height: 24px;
+  }
+
+  .menu__link--email:hover::before,
+  .menu__link--email:focus::before {
+    opacity: 1;
+  }
+
+  .menu__link--email:active::before {
+    opacity: 1;
+  }
+
+  .menu__link--tel:hover::before,
+  .menu__link--tel:focus::before {
+    opacity: 1;
+  }
+
+  .menu__link--tel:active::before {
+    opacity: 1;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .menu__item {
+    margin-top: 13px;
+  }
+
+  .menu__link {
+    margin-left: 15px;
+  }
+}

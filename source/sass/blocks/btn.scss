@@ -1,0 +1,45 @@
+.btn {
+  display: block;
+  box-sizing: border-box;
+  padding: 5px;
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.btn--call {
+  width: 180px;
+  padding: 14px;
+  border: 1px solid #ffffff;
+}
+
+.btn--call:hover,
+.btn--call:focus {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn--call:active {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn:hover,
+.btn:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.btn:active {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: $tablet-width) {
+  .btn--call {
+    display: none;
+  }
+}
