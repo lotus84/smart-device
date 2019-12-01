@@ -37,3 +37,32 @@
   src: url("../fonts/pt-mono-v7-latin_cyrillic-regular.woff2") format("woff2"),
     url("../fonts/pt-mono-v7-latin_cyrillic-regular.woff") format("woff");
 }
+
+body {
+  margin: 0;
+
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: left;
+
+  background-color: $bg-darkgrey;
+  background-image: url("../img/bg-mask-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-mask-desktop@2x.png");
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
