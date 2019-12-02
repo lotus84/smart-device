@@ -55,21 +55,27 @@
 }
 
 .menu__link--email::before {
-  content: url("../img/icon-mail.svg");
+  content: "";
   top: 15px;
   left: 0;
 
   width: 19px;
   height: 14px;
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .menu__link--tel::before {
-  content: url("../img/icon-phone.svg");
+  content: "";
   top: 14px;
   left: 6px;
 
   width: 18px;
   height: 18px;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .menu__link--email:hover::before,
