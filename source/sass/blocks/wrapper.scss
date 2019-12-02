@@ -13,3 +13,15 @@
 .wrapper--grey {
   background-color: $bg-grey;
 }
+
+.wrapper--grey::before {
+  content: "";
+  position: absolute;
+  bottom: -695px;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 1px;
+  background-color: rgba(53, 55, 53, 0.2);
+}

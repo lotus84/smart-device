@@ -1,14 +1,15 @@
 .contacts {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   box-sizing: border-box;
-  width: 400px;
-  padding-left: 60px;
+  width: 345px;
+  margin-bottom: 50px;
 }
 
 .contacts__title {
   margin: 0;
-  margin-bottom: 17px;
+  margin-bottom: 15px;
   padding: 10px;
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -28,7 +29,7 @@
 }
 
 .contacts__item {
-  padding: 10px;
+  padding-left: 10px;
 }
 
 .contacts__item,

@@ -2,11 +2,11 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   box-sizing: border-box;
-  width: 1422px;
+  width: 1430px;
   margin: 0 auto;
   padding-top: 55px;
+  padding-bottom: 3px;
   background-color: $bg-grey;
 }
 
@@ -15,10 +15,12 @@
   justify-content: flex-end;
   box-sizing: border-box;
   width: 860px;
+  margin-top: 14px;
 }
 
 .footer__additional a {
   margin-left: 400px;
+  padding: 10px;
   font-size: 13px;
   line-height: 24px;
   color: rgba(27, 45, 55, 0.5);
