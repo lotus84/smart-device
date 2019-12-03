@@ -1,5 +1,4 @@
 .promo {
-  display: flex;
   margin-top: -165px;
   padding-top: 120px;
   background-color: $bg-darkgrey;
@@ -12,6 +11,65 @@
     background-image: url("../img/bg-mask-desktop@2x.png");
   }
 }
+
+.promo__wrapper {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  max-width: 1568px;
+  margin: 0 auto;
+  margin-top: 110px;
+  padding-bottom: 82px;
+}
+
+.promo__title {
+  margin: 0;
+  margin-top: 60px;
+  margin-bottom: 26px;
+  margin-left: 74px;
+  padding: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.promo__desc {
+  position: relative;
+  box-sizing: border-box;
+  width: 630px;
+  margin: 0;
+  margin-bottom: 44px;
+  margin-left: 170px;
+  padding: 0;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+.promo__desc::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: -92px;
+
+  width: 65px;
+  height: 2px;
+
+  background-color: #ffffff;
+}
+
+.promo__text {
+  width: 170px;
+  margin-top: 92px;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  transform: rotate(-90deg);
+}
+
+
 
 @media (max-width: $tablet-width) {
   .promo {
