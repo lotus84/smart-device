@@ -8,26 +8,26 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  align-items: flex-start;
+  box-sizing: border-box;
   margin: 0;
+  margin-right: 6px;
   padding: 0;
   list-style: none;
 }
 
 .menu__item {
+  display: flex;
   margin-top: 13px;
 }
 
 .menu__link {
-  position: relative;
-  display: block;
+  display: flex;
+  justify-content: flex-end;
   box-sizing: border-box;
 
-  margin-right: 42px;
+  margin-right: 50px;
   padding-top: 14px;
   padding-bottom: 5px;
-  padding-left: 40px;
-  padding-right: 5px;
   line-height: 18px;
   color: #ffffff;
 }
@@ -42,108 +42,68 @@
 }
 
 .menu__link--email {
-  width: 140px;
-  margin-right: 78px;
+  width: 200px;
+  margin-right: 54px;
 }
 
 .menu__link--tel {
-  width: 220px;
+  width: 240px;
 }
 
-.menu__link::before {
-  position: absolute;
+.menu__link:hover path,
+.menu__link:focus path {
+  fill-opacity: 0.6;
 }
 
-.menu__link--email::before {
-  content: "";
-  top: 15px;
-  left: 0;
-
-  width: 19px;
-  height: 14px;
-  background-image: url("../img/icon-mail.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+.menu__link:active path {
+  fill-opacity: 0.2;
 }
 
-.menu__link--tel::before {
-  content: "";
-  top: 14px;
-  left: 6px;
-
-  width: 18px;
-  height: 18px;
-  background-image: url("../img/icon-phone.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+.menu__link-text {
+  margin-left: 16px;
 }
 
-.menu__link--email:hover::before,
-.menu__link--email:focus::before {
-  opacity: 0.6;
-}
-
-.menu__link--email:active::before {
-  opacity: 0.2;
-}
-
-.menu__link--tel:hover::before,
-.menu__link--tel:focus::before {
-  opacity: 0.6;
-}
-
-.menu__link--tel:active::before {
-  opacity: 0.2;
+.menu__link-text--email {
+  margin-left: 20px;
 }
 
 @media (max-width: $tablet-width) {
+  .menu__list {
+    margin: 0;
+  }
+
   .menu__item {
     margin-top: 24px;
   }
 
   .menu__link {
-    width: 26px;
-    padding-left: 5px;
+    width: 30px;
+    padding: 0;
     margin-right: 0;
-    margin-left: 32px;
+    margin-left: 24px;
+  }
+
+  .menu__link--email svg {
+    width: 26px;
+    height: 19px;
+  }
+
+  .menu__link--tel svg {
+    width: 24px;
+    height: 24px;
   }
 
   .menu__link-text {
     display: none;
   }
 
-  .menu__link--email::before {
-    top: 2px;
-    right: 0;
-
-    width: 25px;
-    height: 19px;
+  .menu__link:hover path,
+  .menu__link:focus path {
+    fill-opacity: 1;
   }
 
-  .menu__link--tel::before {
-    top: 0;
-    right: 0;
-
-    width: 24px;
-    height: 24px;
-  }
-
-  .menu__link--email:hover::before,
-  .menu__link--email:focus::before {
-    opacity: 1;
-  }
-
-  .menu__link--email:active::before {
-    opacity: 1;
-  }
-
-  .menu__link--tel:hover::before,
-  .menu__link--tel:focus::before {
-    opacity: 1;
-  }
-
-  .menu__link--tel:active::before {
-    opacity: 1;
+  .menu__link:active path {
+    fill-opacity: 1;
   }
 }
 
