@@ -1,0 +1,77 @@
+.advantages {
+  box-sizing: border-box;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-top: 112px;
+  padding-bottom: 80px;
+  color: #666666;
+}
+
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages__item {
+  display: flex;
+  width: 48.7%;
+  margin-bottom: 30px;
+}
+
+.advantages__link {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 300px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #ffffff;
+  border: 1px solid #ebebeb;
+  border-left: 3px solid #00b2ff;
+}
+
+.advantages__link h3 {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #00b2ff;
+}
+
+.advantages__link p {
+  margin: 0;
+  padding: 0;
+  color: #666666;
+}
+
+.advantages__link:hover,
+.advantages__link:focus {
+  color: #ffffff;
+  background-color: #00b2ff;
+  border: 1px solid #00b2ff;
+}
+
+.advantages__link:hover h3,
+.advantages__link:focus h3 {
+  color: #ffffff;
+}
+
+.advantages__link:hover p,
+.advantages__link:focus p {
+  color: #ffffff;
+}
+
+.advantages__link:hover path,
+.advantages__link:focus path {
+  fill: #ffffff;
+}
