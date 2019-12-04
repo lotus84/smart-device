@@ -21,3 +21,9 @@
 .wrapper--grey {
   background-color: $bg-grey;
 }
+
+@media (max-width: $tablet-width) {
+  .wrapper--blue {
+    background-image: none;
+  }
+}

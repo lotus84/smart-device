@@ -129,7 +129,7 @@
 @media (max-width: $tablet-width) {
   .products {
     padding-top: 46px;
-    padding-bottom: 14px;
+    padding-bottom: 30px;
   }
 
   .products__text {
@@ -193,19 +193,29 @@
 
 @media (max-width: $mobile-width) {
   .products {
+    padding-top: 43px;
+    padding-bottom: 35px;
     padding-left: 15px;
     padding-right: 15px;
   }
 
   .products__text {
+    margin-bottom: 36px;
+    margin-left: 8px;
+    margin-right: 5px;
     font-size: 28px;
+    line-height: 42px;
+  }
+
+  .products__item {
+    margin-bottom: 30px;
   }
 
   .products__link {
     max-width: 290px;
-    padding-top: 26px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-top: 20px;
+    padding-left: 32px;
+    padding-right: 70px;
   }
 
   .products__link--production {
