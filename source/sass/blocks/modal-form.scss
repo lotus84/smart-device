@@ -1,3 +1,205 @@
 .modal-form {
-  display: none;
+  top: 30%;
+  left: 50%;
+  z-index: 20;
+  transform: translate(-50%, -30%);
+
+  box-sizing: border-box;
+  max-width: 490px;
+  padding-top: 20px;
+  padding-bottom: 24px;
+  padding-left: 40px;
+  padding-right: 45px;
+
+  background-color: #00b2ff;
+}
+
+.modal-form__title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 51px;
+}
+
+.modal-form__description {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.modal-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form input {
+  box-sizing: border-box;
+  width: 410px;
+  padding: 15px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-left: 22px;
+  padding-right: 15px;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+}
+
+.modal-form input[type="text"],
+.modal-form input[type="tel"] {
+  margin-bottom: 30px;
+}
+
+.modal-form input::placeholder {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.modal-form textarea {
+  box-sizing: border-box;
+  width: 410px;
+  height: 110px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 22px;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+}
+
+.modal-form textarea::placeholder {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.modal-form button {
+  box-sizing: border-box;
+  width: 410px;
+  margin-bottom: 25px;
+  padding: 15px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-form button:hover,
+.modal-form button:focus {
+  opacity: 0.6;
+}
+
+.modal-form button:active {
+  opacity: 0.2;
+}
+
+.modal-form label {
+  position: relative;
+  box-sizing: border-box;
+  width: 410px;
+  padding: 10px;
+  padding-left: 48px;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.modal-form label::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -2px;
+
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ffffff;
+}
+
+.modal-form input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 2px;
+
+  width: 8px;
+  height: 5px;
+
+  background-image: url("../img/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.modal-form input[type="checkbox"]:hover + label,
+.modal-form input[type="checkbox"]:focus + label {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.modal-form input[type="checkbox"]:hover + label::before,
+.modal-form input[type="checkbox"]:focus + label::before {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.modal-form input[type="checkbox"]:hover + label::after,
+.modal-form input[type="checkbox"]:focus + label::after {
+  opacity: 0.6;
+}
+
+.modal-form input[type="checkbox"] {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.modal-form .modal-form__btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  background-image: url("../img/icon-cross.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
