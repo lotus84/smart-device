@@ -1,0 +1,80 @@
+.about {
+  box-sizing: border-box;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding-bottom: 110px;
+  padding-left: 210px;
+  padding-right: 40px;
+  color: #666666;
+  background-image: url("../img/mask-vertical-number@1x.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 220px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/mask-vertical-number@2x.png");
+  }
+}
+
+.about h2 {
+  margin: 0;
+  margin-bottom: 22px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.about p {
+  margin: 0;
+  margin-bottom: 22px;
+  padding: 0;
+}
+
+@media (max-width: $desktop-width) {
+  .about {
+    width: auto;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .about {
+    padding-bottom: 84px;
+    background-image: url("../img/mask-vertical-number-tablet@1x.png");
+    background-size: 245px;
+    padding-right: 20px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/mask-vertical-number-tablet@2x.png");
+    }
+  }
+
+  .about h2 {
+    font-size: 32px;
+  }
+
+  .about p {
+    max-height: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .about {
+    padding-bottom: 68px;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-image: none;
+  }
+
+  .about h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+  }
+
+  .about p {
+    padding-left: 4px;
+    max-height: 114px;
+  }
+}

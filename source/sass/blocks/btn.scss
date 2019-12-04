@@ -50,8 +50,69 @@
   background-color: #00b2ff;
 }
 
+.btn--promo:hover,
+.btn--promo:focus {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(0, 178, 255, 0.6);
+}
+
+.btn--promo:active {
+  color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 178, 255, 0.2);
+}
+
+.btn--about {
+  margin-top: 40px;
+  padding: 13px;
+  width: 180px;
+  color: #00b2ff;
+  background-color: #ffffff;
+  border: 1px solid #00b2ff;
+}
+
+.btn--about:hover,
+.btn--about:focus {
+  color: rgba(0, 178, 255, 0.6);
+  border: 1px solid rgba(0, 178, 255, 0.6);
+}
+
+.btn--about:active {
+  color: rgba(0, 178, 255, 0.2);
+  border: 1px solid rgba(0, 178, 255, 0.2);
+}
+
 @media (max-width: $tablet-width) {
+  .btn--call:hover,
+  .btn--call:focus,
+  .btn--call:active {
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+
+  .btn:hover,
+  .btn:focus,
+  .btn:active {
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .btn--promo:hover,
+  .btn--promo:focus,
+  .btn--promo:active {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 178, 255, 1);
+  }
+
+  .btn--about:hover,
+  .btn--about:focus,
+  .btn--about:active {
+    color: rgba(0, 178, 255, 1);
+    border: 1px solid rgba(0, 178, 255, 1);
+  }
+
   .btn--call {
     display: none;
+  }
+
+  .btn--about {
+    margin-top: 35px;
   }
 }
