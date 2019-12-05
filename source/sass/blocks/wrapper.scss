@@ -21,11 +21,6 @@
 .wrapper--grey {
   position: relative;
   background-color: $bg-grey;
-
-  background-image: url("../img/line.svg");
-  background-repeat: no-repeat;
-  background-position: bottom 50px left 0;
-  background-size: auto;
 }
 
 .wrapper--grey::before {
@@ -65,5 +60,22 @@
     background-image: url("../img/line.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .wrapper--grey {
+    background-image: url("../img/line.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 100px left 0;
+    background-size: auto;
+  }
+
+  .wrapper--grey::after {
+    top: 260px;
+  }
+
+  .wrapper--grey::before {
+    bottom: 120px;
   }
 }

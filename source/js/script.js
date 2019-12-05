@@ -7,6 +7,7 @@ var nameInput = popupForm.querySelector('[name=name]');
 var phoneInput = popupForm.querySelector('[name=phone]');
 var messageInput = popupForm.querySelector('[name=question]');
 var overlay = document.querySelector('.modal__overlay');
+var toggles = document.querySelectorAll('.footer__toggle');
 
 if (buttonCall && overlay) {
   buttonCall.addEventListener('click', function(evt) {
@@ -46,3 +47,17 @@ form.addEventListener("submit", function () {
     localStorage.setItem("userPhone", phoneInput.value);
     localStorage.setItem("userMessage", messageInput.value);
   })
+
+  if (toggles) {
+    for (var i = 0; i < toggles.length; i++) {
+      toggles[i].addEventListener('click', function() {
+        this.classList.toggle('.footer__toggle--active');
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      })
+    }
+  }

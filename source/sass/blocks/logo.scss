@@ -62,20 +62,42 @@
   color: #788891;
 }
 
+@media (max-width: $desktop-width) {
+  .logo--footer {
+    width: 100%;
+    margin-right: 40%;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .logo--footer {
     width: 50%;
     margin-right: 0;
   }
 
-  .logo__link {
+  .logo__link--footer {
     margin-left: 5px;
   }
 }
 
 @media (max-width: $mobile-width) {
+  .logo--footer {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+
+  .logo--footer .logo__text {
+    display: block;
+  }
+
   .logo__link {
     margin-top: 6px;
+    margin-left: 2px;
+  }
+
+  .logo__link--footer {
+    margin-left: 6px;
   }
 
   .logo__link img {

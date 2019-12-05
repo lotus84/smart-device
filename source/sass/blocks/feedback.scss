@@ -277,19 +277,20 @@
 
 @media (max-width: $mobile-width) {
   .feedback {
-    padding-top: 24px;
-    padding-bottom: 54px;
+    padding-top: 26px;
+    padding-bottom: 40px;
     padding-left: 15px;
     padding-right: 15px;
   }
 
   .feedback__title {
-    margin-bottom: 8px;
+    margin-bottom: 11px;
     font-size: 28px;
+    line-height: 42px;
   }
 
   .feedback__text {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
 
   .feedback__form input {
@@ -298,7 +299,7 @@
 
   .feedback__form input[type="tel"],
   .feedback__form input[type="text"] {
-    margin-bottom: 35px;
+    margin-bottom: 31px;
   }
 
   .feedback__form textarea {

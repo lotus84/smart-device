@@ -112,7 +112,7 @@
 
 @media (max-width: $mobile-width) {
   .advantages {
-    padding-top: 40px;
+    padding-top: 38px;
     padding-bottom: 30px;
     padding-left: 15px;
     padding-right: 15px;
@@ -129,6 +129,9 @@
 
   .advantages__link {
     width: 100%;
+    min-height: 290px;
+    padding-bottom: 25px;
+    padding-right: 15px;
   }
 
   .advantages__link h3 {

@@ -20,6 +20,12 @@
   margin-right: 65px;
 }
 
+@media (max-width: $desktop-width) {
+  .copyright {
+    width: 50%;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .copyright {
     order: -1;
@@ -30,5 +36,12 @@
 
   .copyright__text {
     display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .copyright {
+    margin-bottom: -115px;
+    margin-left: 25%;
   }
 }

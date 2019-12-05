@@ -56,10 +56,25 @@
   opacity: 0.2;
 }
 
+@media (max-width: $desktop-width) {
+  .socials {
+    width: 100%;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .socials {
     width: 50%;
-    margin-left: 425px;
+    margin-left: 438px;
     margin-top: 20px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .socials {
+    width: auto;
+    margin: 0 auto;
+    margin-bottom: 74px;
+    margin-left: 58px;
   }
 }
