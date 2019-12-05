@@ -50,6 +50,10 @@
   background-color: #00b2ff;
 }
 
+.btn--promo span:last-child {
+  display: none;
+}
+
 .btn--promo:hover,
 .btn--promo:focus {
   color: rgba(255, 255, 255, 0.6);
@@ -115,4 +119,26 @@
   .btn--about {
     margin-top: 35px;
   }
+
+  .btn--promo {
+    max-width: 380px;
+    margin-left: 114px;
+  }
 }
+
+@media (max-width: $mobile-width) {
+  .btn--promo {
+    max-width: 287px;
+    margin-left: 3px;
+  }
+
+  .btn--promo span:first-child {
+    display: none;
+  }
+
+  .btn--promo span:last-child {
+    display: inline;
+  }
+}
+
+
