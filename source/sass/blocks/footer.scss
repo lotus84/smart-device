@@ -1,25 +1,39 @@
 .footer {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
-  width: 1430px;
+  max-width: 1430px;
   margin: 0 auto;
   padding-top: 55px;
   padding-bottom: 3px;
   background-color: $bg-grey;
 }
 
+.footer__col {
+  display: flex;
+}
+
+.footer__col--first {
+  flex-direction: column;
+}
+
+.footer__col--second {
+  flex-direction: row;
+}
+
+.footer__toggle {
+  display: none;
+}
+
 .footer__additional {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   box-sizing: border-box;
-  width: 860px;
+  width: 834px;
   margin-top: 14px;
 }
 
 .footer__additional a {
-  margin-left: 400px;
   padding: 10px;
   font-size: 13px;
   line-height: 24px;

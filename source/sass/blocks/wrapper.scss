@@ -20,6 +20,10 @@
 
 .wrapper--grey {
   background-color: $bg-grey;
+  background-image: url("../img/line.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 50px left 0;
+  background-size: auto;
 }
 
 @media (max-width: $tablet-width) {
