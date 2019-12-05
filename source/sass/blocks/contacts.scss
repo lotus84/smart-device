@@ -47,3 +47,11 @@
 .contacts__link:active {
   color: rgba(27, 45, 55, 0.2);
 }
+
+@media (max-width: $tablet-width) {
+  .contacts {
+    width: 50%;
+    margin-bottom: 78px;
+    margin-left: 25px;
+  }
+}

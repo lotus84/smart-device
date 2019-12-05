@@ -54,3 +54,14 @@
 .footer-nav__link:active {
   color: rgba(27, 45, 55, 0.2);
 }
+
+@media (max-width: $tablet-width) {
+  .footer-nav {
+    width: 50%;
+    margin-right: 0;
+  }
+
+  .footer-nav__list {
+    height: auto;
+  }
+}

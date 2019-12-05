@@ -63,6 +63,11 @@
 }
 
 @media (max-width: $tablet-width) {
+  .logo--footer {
+    width: 50%;
+    margin-right: 0;
+  }
+
   .logo__link {
     margin-left: 5px;
   }

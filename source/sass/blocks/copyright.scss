@@ -19,3 +19,16 @@
 .copyright__text {
   margin-right: 65px;
 }
+
+@media (max-width: $tablet-width) {
+  .copyright {
+    order: -1;
+    width: auto;
+    margin-bottom: -60px;
+    margin-left: 42%;
+  }
+
+  .copyright__text {
+    display: none;
+  }
+}

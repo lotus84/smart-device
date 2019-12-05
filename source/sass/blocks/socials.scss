@@ -55,3 +55,11 @@
 .socials__link:active::before {
   opacity: 0.2;
 }
+
+@media (max-width: $tablet-width) {
+  .socials {
+    width: 50%;
+    margin-left: 425px;
+    margin-top: 20px;
+  }
+}
