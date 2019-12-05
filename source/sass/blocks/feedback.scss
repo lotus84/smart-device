@@ -1,16 +1,34 @@
 .feedback {
+  display: flex;
+  background-color: $bg-blue;
+}
+
+.feedback__col {
+  width: 50%;
+}
+
+.feedback__col--left {
+  background-image: url("../img/paper-airplane-desktop@1x.png"), url("../img/feedback-triangle-medium-left.svg"), url("../img/feedback-triangle-big-left.svg");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 82.8% 42%, 42.8% 76%, 70.5% 51%;
+  background-size: 511px auto, auto, auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/paper-airplane-desktop@2x.png"), url("../img/feedback-triangle-medium-left.svg"), url("../img/feedback-triangle-big-left.svg");
+  }
+}
+
+.feedback__col--right {
   box-sizing: border-box;
-  max-width: 1170px;
-  margin: 0 auto;
   padding-top: 88px;
   padding-bottom: 112px;
-  padding-left: 595px;
 }
 
 .feedback__title {
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
+  padding-left: 10px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
@@ -21,12 +39,12 @@
   margin: 0;
   margin-bottom: 52px;
   padding: 0;
-  padding-left: 5px;
+  padding-left: 16px;
 }
 
 .feedback__form {
   max-width: 570px;
-  margin-left: 5px;
+  margin-left: 14px;
 }
 
 .feedback__form form {
@@ -220,10 +238,19 @@
 @media (max-width: $tablet-width) {
   .feedback {
     max-width: 770px;
-    padding-top: 78px;
+    padding-top: 81px;
     padding-bottom: 102px;
-    padding-left: 90px;
+    padding-left: 79px;
     padding-right: 90px;
+  }
+
+  .feedback__col--left {
+    display: none;
+  }
+
+  .feedback__col--right {
+    width: 100%;
+    padding: 0;
   }
 
   .feedback__title {
@@ -232,17 +259,17 @@
   }
 
   .feedback__text {
-    margin-bottom: 55px;
-    padding-left: 3px;
+    margin-bottom: 53px;
+    padding-left: 14px;
   }
 
   .feedback__form {
     max-width: 580px;
-    margin-left: 3px;
+    margin-left: 12px;
   }
 
   .feedback__form textarea {
-    margin-bottom: 54px;
+    margin-bottom: 50px;
   }
 
   .feedback__form button {
@@ -250,7 +277,7 @@
   }
 
   .feedback__form label {
-    width: 45.33%;
+    width: 44.33%;
   }
 
   .feedback__form button:hover,

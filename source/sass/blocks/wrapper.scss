@@ -6,18 +6,6 @@
   background-color: $bg-darkgrey;
 }
 
-.wrapper--blue {
-  background-color: $bg-blue;
-  background-image: url("../img/paper-airplane-desktop@1x.png"), url("../img/feedback-triangle-medium-left.svg"), url("../img/feedback-triangle-big-left.svg"), url("../img/feedback-triangle-medium-right.svg"), url("../img/feedback-triangle-small-right.svg");
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-  background-position: 28.8% 42%, 17.8% 76%, 23.5% 51%, 93% 109%, 92.5% 9%;
-  background-size: 511px auto, auto, auto, auto, auto;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/paper-airplane-desktop@2x.png"), url("../img/feedback-triangle-medium-left.svg"), url("../img/feedback-triangle-big-left.svg"), url("../img/feedback-triangle-medium-right.svg"), url("../img/feedback-triangle-small-right.svg");
-  }
-}
-
 .wrapper--grey {
   position: relative;
   background-color: $bg-grey;
@@ -39,10 +27,6 @@
 }
 
 @media (max-width: $tablet-width) {
-  .wrapper--blue {
-    background-image: none;
-  }
-
   .wrapper--grey::before {
     bottom: 70px;
   }
