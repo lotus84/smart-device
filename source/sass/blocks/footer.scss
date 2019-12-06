@@ -107,10 +107,15 @@
 
 @media (max-width: $mobile-width) {
   .footer {
-    padding-top: 74px;
+    padding-top: 0;
+  }
+
+  .footer__col--first {
+    flex-direction: column;
   }
 
   .footer__col--second {
+    flex-direction: column;
     margin-bottom: 24px;
   }
 

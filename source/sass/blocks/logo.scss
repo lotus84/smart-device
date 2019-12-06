@@ -82,9 +82,10 @@
 
 @media (max-width: $mobile-width) {
   .logo--footer {
-    width: 100%;
+    width: auto;
     margin: 0 auto;
-    margin-bottom: 80px;
+    margin-bottom: 81px;
+    margin-top: -118px;
   }
 
   .logo--footer .logo__text {
