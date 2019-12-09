@@ -71,12 +71,22 @@
 }
 
 .promo__text {
+  display: block;
   width: 170px;
   margin-top: 92px;
   font-size: 14px;
   line-height: 16px;
   color: rgba(255, 255, 255, 0.5);
   transform: rotate(-90deg);
+}
+
+.promo__text:hover,
+.promo__text:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.promo__text:active {
+  color: rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: $desktop-width) {
