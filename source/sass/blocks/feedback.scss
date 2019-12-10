@@ -67,6 +67,7 @@
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
+  border-radius: 0;
 }
 
 .feedback__form input[type="text"],
@@ -97,6 +98,7 @@
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
+  border-radius: 0;
 }
 
 .feedback__form textarea::placeholder {
