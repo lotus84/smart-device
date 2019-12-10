@@ -84,6 +84,7 @@
   border: none;
   border-radius: 0;
   resize: none;
+  overflow: auto;
 }
 
 .modal-form textarea::placeholder {
