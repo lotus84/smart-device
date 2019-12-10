@@ -28,7 +28,7 @@
 .products__item {
   width: 370px;
   margin-bottom: 30px;
-  margin-right: 5%;
+  margin-right: 30px;
 }
 
 .products__item:nth-child(3n) {
@@ -121,6 +121,7 @@
 
   .products__item {
     width: 30%;
+    margin-right: 5%;
   }
 
   .products__link {
