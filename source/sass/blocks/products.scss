@@ -154,11 +154,11 @@
   }
 
   .products__link {
-    max-width: 720px;
+    width: 100%;
     min-height: 256px;
     padding-top: 42px;
-    padding-left: 46px;
-    padding-right: 486px;
+    padding-left: 6.4%;
+    padding-right: 71.5%;
   }
 
   .products__link:hover,
@@ -169,7 +169,7 @@
 
   .products__link--production {
     background-image: url("../img/bg-production-mask-tablet@1x.png");
-    background-size: 720px auto;
+    background-size: 100% auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-production-mask-tablet@2x.png");
@@ -178,7 +178,7 @@
 
   .products__link--install {
     background-image: url("../img/bg-install-mask-tablet@1x.png");
-    background-size: 720px auto;
+    background-size: 100% auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-install-mask-tablet@2x.png");
@@ -187,7 +187,7 @@
 
   .products__link--components {
     background-image: url("../img/bg-components-mask-tablet@1x.png");
-    background-size: 720px auto;
+    background-size: 100% auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-components-mask-tablet@2x.png");
@@ -216,15 +216,14 @@
   }
 
   .products__link {
-    max-width: 290px;
     padding-top: 21px;
-    padding-left: 34px;
-    padding-right: 70px;
+    padding-left: 11.7%;
+    padding-right: 24.1%;
   }
 
   .products__link--production {
     background-image: url("../img/bg-production-mask-mobile@1x.png");
-    background-size: 290px auto;
+    background-size: 100% auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-production-mask-mobile@2x.png");
@@ -233,7 +232,7 @@
 
   .products__link--install {
     background-image: url("../img/bg-install-mask-mobile@1x.png");
-    background-size: 290px auto;
+    background-size: 100% auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-install-mask-mobile@2x.png");
@@ -242,7 +241,7 @@
 
   .products__link--components {
     background-image: url("../img/bg-components-mask-mobile@1x.png");
-    background-size: 290px auto;
+    background-size: 100% auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-components-mask-mobile@2x.png");
