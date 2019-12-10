@@ -99,15 +99,3 @@ for (var j = 0; j < anchorLinks.length; j++) {
     smoothScroll(evt);
   });
 }
-
-
-// Маска для инпута с номером телефона
-
-import IMask from 'imask';
-
-var element = document.querySelector('.modal-form input=[type=tel]');
-var maskOptions = {
-  mask: '+{7}(000)000-00-00',
-};
-
-var mask = new IMask(element, maskOptions);

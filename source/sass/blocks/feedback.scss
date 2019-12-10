@@ -237,7 +237,6 @@
 
 @media (max-width: $tablet-width) {
   .feedback {
-    max-width: 770px;
     padding-top: 81px;
     padding-bottom: 102px;
     padding-left: 79px;
@@ -264,7 +263,7 @@
   }
 
   .feedback__form {
-    max-width: 580px;
+    max-width: 100%;
     margin-left: 12px;
   }
 
