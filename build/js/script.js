@@ -61,3 +61,41 @@ if (toggles) {
     });
   }
 }
+
+// Плавный скролл страницы до якорной ссылки
+
+var anchorLinks = document.querySelectorAll('a[href^="#"]');
+var smoothScroll = function (evt) {
+  evt.preventDefault();
+  var targetId = evt.currentTarget.getAttribute('href');
+  var targetPosition = document.querySelector(targetId).offsetTop;
+  var startPosition = window.pageYOffset;
+  var distance = targetPosition - startPosition;
+  var duration = 2000;
+  var start = null;
+  var step = function (timestamp) {
+    if (!start) {
+      start = timestamp;
+    }
+    var progress = timestamp - start;
+    window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
+    if (progress < duration) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+};
+var easeInOutQuad = function (t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) {
+    return c / 2 * t * t + b;
+  }
+  t--;
+  return -c / 2 * (t * (t - 2) - 1) + b;
+};
+
+for (var j = 0; j < anchorLinks.length; j++) {
+  anchorLinks[j].addEventListener('click', function (evt) {
+    smoothScroll(evt);
+  });
+}
