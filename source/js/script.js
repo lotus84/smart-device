@@ -139,3 +139,15 @@ for (var j = 0; j < anchorLinks.length; j++) {
     smoothScroll(evt);
   });
 }
+
+
+// Маска для поля ввода номера телефона
+
+var telInputs = Array.from(document.querySelectorAll('input[type=tel]'));
+var maskOptions = {
+  mask: '+{7}(000)000-00-00'
+};
+
+for (var k = 0; k < telInputs.length; k++) {
+  var mask = IMask(telInputs[k], maskOptions);
+}
