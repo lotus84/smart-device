@@ -10,7 +10,7 @@
 .feedback__col--left {
   background-image: url("../img/paper-airplane-desktop@1x.png"), url("../img/feedback-triangle-medium-left.svg"), url("../img/feedback-triangle-big-left.svg");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 82.8% 42%, 42.8% 76%, 70.5% 51%;
+  background-position: right 13% top 42%, right 46% top 76%, right 21.5% top 51%;
   background-size: 511px auto, auto, auto;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -215,6 +215,15 @@
     width: auto;
     padding-left: 25px;
     padding-right: 25px;
+  }
+
+  .feedback__col--left {
+    width: 40%;
+    background-size: 75% auto, 50%, 65%;
+  }
+
+  .feedback__col--right {
+    width: 60%;
   }
 
   .feedback__form {
