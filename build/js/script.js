@@ -15,7 +15,7 @@ var openPopup = function () {
   var scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
   var body = document.body;
   body.style.position = 'fixed';
-  body.style.top = `-${scrollY}`;
+  body.style.top = '-' + scrollY;
 };
 
 var closePopup = function () {
@@ -57,7 +57,7 @@ window.addEventListener('keydown', function (evt) {
 });
 
 window.addEventListener('scroll', function () {
-  document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+  document.documentElement.style.setProperty('--scroll-y', window.scrollY + 'px');
 });
 
 form.addEventListener('submit', function () {
@@ -68,8 +68,8 @@ form.addEventListener('submit', function () {
 
 // Аккордеон в футере на мобильной версии
 
-var accordionToggles = Array.from(document.querySelectorAll('.footer__toggle'));
-var accordionContentPanels = Array.from(document.querySelectorAll('.footer__list'));
+var accordionToggles = document.querySelectorAll('.footer__toggle');
+var accordionContentPanels = document.querySelectorAll('.footer__list');
 
 var addClass = function (el, className) {
   el.classList.add(className);
@@ -80,22 +80,22 @@ var removeClass = function (el, className) {
 };
 
 var toggleAccordion = function (e) {
-  accordionContentPanels.forEach(function(content) {
-    if (content.previousElementSibling === e.target) {
-      removeClass(content.previousElementSibling, 'footer__toggle--inactive');
-      addClass(content.previousElementSibling, 'footer__toggle--active');
-      removeClass(content, 'footer__list--hidden');
+  for (var i = 0; i < accordionContentPanels.length; i++) {
+    if (accordionContentPanels[i].previousElementSibling === e.target) {
+      removeClass(accordionContentPanels[i].previousElementSibling, 'footer__toggle--inactive');
+      addClass(accordionContentPanels[i].previousElementSibling, 'footer__toggle--active');
+      removeClass(accordionContentPanels[i], 'footer__list--hidden');
     } else {
-      removeClass(content.previousElementSibling, 'footer__toggle--active');
-      addClass(content.previousElementSibling, 'footer__toggle--inactive');
-      addClass(content, 'footer__list--hidden');
+      removeClass(accordionContentPanels[i].previousElementSibling, 'footer__toggle--active');
+      addClass(accordionContentPanels[i].previousElementSibling, 'footer__toggle--inactive');
+      addClass(accordionContentPanels[i], 'footer__list--hidden');
     }
-  });
+  }
 };
 
-accordionToggles.forEach(function(it) {
-  it.addEventListener('click', toggleAccordion);
-});
+for (var l = 0; l < accordionToggles.length; l++) {
+  accordionToggles[l].addEventListener('click', toggleAccordion);
+}
 
 // Плавный скролл страницы до якорной ссылки
 
@@ -135,10 +135,9 @@ for (var j = 0; j < anchorLinks.length; j++) {
   });
 }
 
-
 // Маска для поля ввода номера телефона
 
-var telInputs = Array.from(document.querySelectorAll('input[type=tel]'));
+var telInputs = document.querySelectorAll('input[type=tel]');
 var maskOptions = {
   mask: '+{7}(000)000-00-00'
 };
