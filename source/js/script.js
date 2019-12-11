@@ -85,7 +85,6 @@ var toggleAccordion = function (e) {
       removeClass(content.previousElementSibling, 'footer__toggle--inactive');
       addClass(content.previousElementSibling, 'footer__toggle--active');
       removeClass(content, 'footer__list--hidden');
-
     } else {
       removeClass(content.previousElementSibling, 'footer__toggle--active');
       addClass(content.previousElementSibling, 'footer__toggle--inactive');
