@@ -7,7 +7,6 @@ var nameInput = popupForm.querySelector('[name=name]');
 var phoneInput = popupForm.querySelector('[name=phone]');
 var messageInput = popupForm.querySelector('[name=question]');
 var overlay = document.querySelector('.overlay');
-var toggles = document.querySelectorAll('.footer__toggle');
 
 if (buttonCall && overlay) {
   buttonCall.addEventListener('click', function (evt) {
@@ -71,19 +70,37 @@ form.addEventListener('submit', function () {
   localStorage.setItem('userPhone', phoneInput.value);
 });
 
-if (toggles) {
-  for (var i = 0; i < toggles.length; i++) {
-    toggles[i].addEventListener('click', function () {
-      this.classList.toggle('.footer__toggle--active');
-      var panel = this.nextElementSibling;
-      if (panel.style.display === 'block') {
-        panel.style.display = 'none';
-      } else {
-        panel.style.display = 'block';
-      }
-    });
-  }
+// Аккордеон в футере на мобильной версии
+
+var accordionToggles = Array.from(document.querySelectorAll('.footer__toggle'));
+var accordionContentPanels = Array.from(document.querySelectorAll('.footer__list'));
+
+var addClass = function (el, className) {
+  el.classList.add(className);
 }
+
+var removeClass = function (el, className) {
+  el.classList.remove(className);
+}
+
+var toggleAccordion = function (e) {
+  accordionContentPanels.forEach(function(content) {
+    if (content.previousElementSibling === e.target) {
+      removeClass(content.previousElementSibling, 'footer__toggle--inactive');
+      addClass(content.previousElementSibling, 'footer__toggle--active');
+      removeClass(content, 'footer__list--hidden');
+
+    } else {
+      removeClass(content.previousElementSibling, 'footer__toggle--active');
+      addClass(content.previousElementSibling, 'footer__toggle--inactive');
+      addClass(content, 'footer__list--hidden');
+    }
+  });
+}
+
+accordionToggles.forEach(function(it) {
+  it.addEventListener('click', toggleAccordion);
+});
 
 // Плавный скролл страницы до якорной ссылки
 
