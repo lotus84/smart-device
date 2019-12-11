@@ -8,40 +8,42 @@ var phoneInput = popupForm.querySelector('[name=phone]');
 var messageInput = popupForm.querySelector('[name=question]');
 var overlay = document.querySelector('.overlay');
 
+var openPopup = function () {
+  popupForm.classList.add('modal--show');
+  overlay.classList.add('overlay--show');
+  nameInput.focus();
+  var scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+  var body = document.body;
+  body.style.position = 'fixed';
+  body.style.top = `-${scrollY}`;
+};
+
+var closePopup = function () {
+  var body = document.body;
+  var scrollY = body.style.top;
+  body.style.position = '';
+  body.style.top = '';
+  window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  popupForm.classList.remove('modal--show');
+  overlay.classList.remove('overlay--show');
+};
+
 if (buttonCall && overlay) {
   buttonCall.addEventListener('click', function (evt) {
     evt.preventDefault();
-    popupForm.classList.add('modal--show');
-    overlay.classList.add('overlay--show');
-    nameInput.focus();
-    var scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-    var body = document.body;
-    body.style.position = 'fixed';
-    body.style.top = `-${scrollY}`;
+    openPopup();
   });
 }
 
 if (popupClose) {
   popupClose.addEventListener('click', function () {
-    var body = document.body;
-    var scrollY = body.style.top;
-    body.style.position = '';
-    body.style.top = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    popupForm.classList.remove('modal--show');
-    overlay.classList.remove('overlay--show');
+    closePopup();
   });
 }
 
 if (overlay) {
   overlay.addEventListener('click', function () {
-    var body = document.body;
-    var scrollY = body.style.top;
-    body.style.position = '';
-    body.style.top = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    popupForm.classList.remove('modal--show');
-    overlay.classList.remove('overlay--show');
+    closePopup();
   });
 }
 
@@ -49,13 +51,7 @@ window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
     if (popupForm.classList.contains('modal--show')) {
-      var body = document.body;
-      var scrollY = body.style.top;
-      body.style.position = '';
-      body.style.top = '';
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);
-      popupForm.classList.remove('modal--show');
-      overlay.classList.remove('overlay--show');
+      closePopup();
     }
   }
 });
@@ -77,11 +73,11 @@ var accordionContentPanels = Array.from(document.querySelectorAll('.footer__list
 
 var addClass = function (el, className) {
   el.classList.add(className);
-}
+};
 
 var removeClass = function (el, className) {
   el.classList.remove(className);
-}
+};
 
 var toggleAccordion = function (e) {
   accordionContentPanels.forEach(function(content) {
@@ -96,7 +92,7 @@ var toggleAccordion = function (e) {
       addClass(content, 'footer__list--hidden');
     }
   });
-}
+};
 
 accordionToggles.forEach(function(it) {
   it.addEventListener('click', toggleAccordion);
@@ -149,5 +145,5 @@ var maskOptions = {
 };
 
 for (var k = 0; k < telInputs.length; k++) {
-  var mask = IMask(telInputs[k], maskOptions);
+  var mask = new IMask(telInputs[k], maskOptions);
 }
